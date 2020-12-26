@@ -1,0 +1,19 @@
+{
+  "name": "laboratorio",
+  "version": "1.0.0",
+  "description": "Página para guardar pedidos y otros datos del laboratorio",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ansuz-Jera/laboratorio_utn.git"
+  },
+  "author": "Azurmendi Joaquín",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ansuz-Jera/laboratorio_utn/issues"
+  },
+  "homepage": "https://github.com/Ansuz-Jera/laboratorio_utn#readme"
+}
