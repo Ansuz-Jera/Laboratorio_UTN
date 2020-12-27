@@ -51,7 +51,33 @@
     
     <div class="container">
       <hr>
-    <img src="images/arduino.jpg" class="img-fluid" alt="Responsive image" style="height: 300px; width: 100%;"> <!--Imagen responsive se adapta al contenedor -->       
+      <img src="images/arduino.jpg" class="img-fluid" alt="Responsive image" style="height: 300px; width: 100%;"> <!--Imagen responsive se adapta al contenedor -->  
+      
+      <div class="carousel slide" id="carouselControls" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="images/arduino.jpg" alt="Primer slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/componentes.jpg" alt="Segundo slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/herramientas.jpg" alt="Tercer slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/medicion.jpg" alt="Cuarto slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+
       <div class="d-flex flex-wrap flex-row mb-4">
         <div class="card card-componentes d-flex flex-column justify-content-between ml-2">
           <!-- <div class="card-header" style="backgraound-color: blue; color: white;">Arduino</div>-->
@@ -218,6 +244,9 @@
       $(function(){
         $("[data-toggle='tooltip']").tooltip(); //$("[data-toggle='tooltip']") -> elementos
         $("[data-toggle='popover']").popover();
+        $('.carousel').carousel({
+          interval: 2000
+        });
       });
     </script>
   </body>
