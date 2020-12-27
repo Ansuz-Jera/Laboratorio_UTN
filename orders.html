@@ -12,9 +12,9 @@
 
     <title>Laboratorio de electrónica</title>
   </head>
-  <body class="p-3 my-3 bg-dark text-white">
+  <body class="p-3 my-3 bg-dark text-white" style="background-image:url(/images/desktop-wallpaper.jpg);">
     <nav class="navbar navbar-expand-md navbar-dark bg-color fixed-top">  <!--navbar "despliegue responsive" "color del texto" "color del fondo" "deja la barra fija"-->
-      <a class="navbar-brand" href="#">Laboratorio UTN</a>    <!--Defino "Laboratorio" como ruta a ningun lado-->
+      <a class="navbar-brand" href="./index.html">Laboratorio UTN</a>    <!--Defino "Laboratorio" como ruta a ningun lado-->
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <!--class="tipo de boton que maneje" data-toggle="espicifica a bootstrap el comportamiento" data-target="Especifica que va a activar la acción data-toggle" -->
         <span class="navbar-toggler-icon"></span>   <!--Dibujo el icono-->
@@ -66,17 +66,20 @@
     <nav>
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" id="compara-tab" data-toggle="tab" href="#compara" role="tab" aria-control="compara" aria-selected="true">Compara</a>
+          <a class="nav-link active" id="arduino-tab" data-toggle="tab" href="#arduino" role="tab" aria-control="arduino" aria-selected="true">Arduino</a>
         </li> 
         <li class="nav-item">
-          <a class="nav-link" id="tarjetas-tab" data-toggle="tab" href="#tarjetas" role="tab" aria-control="tarjetas" aria-selected="true">Tarjetas</a>
+          <a class="nav-link" id="componentes-tab" data-toggle="tab" href="#componentes" role="tab" aria-control="componentes" aria-selected="true">Componentes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="comentarios-tab" data-toggle="tab" href="#comentarios" role="tab" aria-control="comentarios" aria-selected="true">Comentarios</a>
+          <a class="nav-link" id="herramientas-tab" data-toggle="tab" href="#herramientas" role="tab" aria-control="herramientas" aria-selected="true">Herramientas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="medicion-tab" data-toggle="tab" href="#medicion" role="tab" aria-control="medicion" aria-selected="true">Instrumentos de medición</a>
         </li>
       </ul>
       <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="compara" role="tabpanel" aria-labelledby="compara-tab">
+        <div class="tab-pane fade show active" id="arduino" role="tabpanel" aria-labelledby="arduino-tab">
           <div class="table-responsive">
             <table class="table table-striped">
               <thead style="background-color: blueviolet;">
@@ -182,20 +185,9 @@
             </table>
           </div>
         </div>
-        <div class="tab-pane fade" id="tarjetas" role="tabpanel" aria-labelledby="tarjetas-tab">
-          <!--<div class="d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-              <div class="card-header" style="background-color: blueviolet;
-                color: white;">
-                Tarjetas aceptadas
-              </div>
-              <ul class="list-group list-group-flush" style="color: black;">
-                <il class="list-group-item">Tarjetas básica</il>
-                <il class="list-group-item">Tarjetas VIP</il>
-                <il class="list-group-item">Tarjetas Black</il>
-              </ul>
-            </div>
-          </div>-->
+
+        <div class="tab-pane fade" id="componentes" role="tabpanel" aria-labelledby="componentes-tab">
+
           <div class="accordion" id="accordionTarjetas">
             <div class="card">
               <div class="card-header" id="headingOne">
@@ -235,8 +227,67 @@
             </div>
 
           </div>
+        </div>
+
+        <div class="tab-pane fade" id="herramientas" role="tabpanel" aria-labelledby="herramientas-tab">
+          
+          <div class="d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <div class="card-header" style="background-color: blueviolet;
+                color: white;">
+                Tarjetas aceptadas
+              </div>
+              <ul class="list-group list-group-flush" style="color: black;">
+                <il class="list-group-item">Tarjetas básica</il>
+                <il class="list-group-item">Tarjetas VIP</il>
+                <il class="list-group-item">Tarjetas Black</il>
+              </ul>
+            </div>
+          </div>
 
         </div>
+        <div class="tab-pane fade" id="medicion" role="tabpanel" aria-labelledby="medicion-tab">
+
+          <div class="accordion" id="accordionTarjetas">
+            <div class="card">
+              <div class="card-header" id="One">
+                <h5 class="mb-0">
+                  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapse1" 
+                  aria-expanded="true" aria-controls="collapse1">Tarjeta Basica</button>
+                </h5>                
+              </div>
+              <div id="collapse1" class="collapse" aria-labelledby="One"
+              data-parent="#accordionTarjetas">
+                <div class="card-body">Podes reservar en 3 cuotas sin interes</div>  
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="Two">
+                <h5 class="mb-0">
+                  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapse2" 
+                  aria-expanded="true" aria-controls="collapse2">Tarjeta VIP</button>
+                </h5>                
+              </div>
+              <div id="collapse2" class="collapse" aria-labelledby="Two"
+              data-parent="#accordionTarjetas">
+                <div class="card-body">Podes reservar en 6 cuotas sin interes</div>  
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="Three">
+                <h5 class="mb-0">
+                  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapse3" 
+                  aria-expanded="true" aria-controls="collapse3">Tarjeta Black</button>
+                </h5>                
+              </div>
+              <div id="collapse3" class="collapse" aria-labelledby="Three"
+              data-parent="#accordionTarjetas">
+                <div class="card-body">Podes reservar en 9 cuotas sin interes</div>  
+              </div>
+            </div>
+
+          </div>
+
       </div>
     </nav>
     

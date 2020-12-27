@@ -11,41 +11,13 @@
 
     <title>Laboratorio de electrónica</title>
   </head>
-  <body class="p-3 my-3 bg-dark text-white">
+  <body class="p-3 my-3 bg-dark text-white" style="background-image:url(/images/desktop-wallpaper.jpg);">
     <nav class="navbar navbar-expand-md navbar-dark bg-color fixed-top">  <!--navbar "despliegue responsive" "color del texto" "color del fondo" "deja la barra fija"-->
-      <a class="navbar-brand" href="#">Laboratorio UTN</a>    <!--Defino "Laboratorio" como ruta a ningun lado-->
+      <a class="navbar-brand" href="./index.html">Laboratorio UTN</a>    <!--Defino "Laboratorio" como ruta a ningun lado-->
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <!--class="tipo de boton que maneje" data-toggle="espicifica a bootstrap el comportamiento" data-target="Especifica que va a activar la acción data-toggle" -->
         <span class="navbar-toggler-icon"></span>   <!--Dibujo el icono-->
        </button> 
-      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"> 
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>-->
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -56,25 +28,132 @@
         </ul>
       </div>
     </nav>
+
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb bg-dark" style="margin-top: 20px;">
         <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Reparaciones</li>
       </ol>
     </nav> 
-    <div class="container"> 
-      <div class="jumbotron text-center">
+
+    <div class="container">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-3">Plantilla de repación</h1>
+          <p class="lead">Complete el siguiente formulario del equipo que desea dejar.</p>
+          <hr class="my-2">
+          <form class="needs-validation" novalidate>            
+            <div class="form-row">
+              <div class="form-group col-sm-6">
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control" id="name" placeholder="Ingrese su nombre" required>
+                <div class="invalid-feedback">
+                  Por favor coloque su nombre.
+                </div>
+                <div class="valid-feedback">
+                  Correcto!
+                </div>
+              </div>          
+              <div class="form-group col-sm-6">
+                <label for="subname">Apellido</label>
+                <input type="text" class="form-control" id="subname" placeholder="Ingrese su apellido" required>
+                <div class="invalid-feedback">
+                  Por favor coloque su apellido.
+                </div>
+                <div class="valid-feedback">
+                  Correcto!
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <div class="input-group">                
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                </div>
+                <input type="text" class="form-control" id="email" placeholder="Ingrese su correo" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Por favor coloque una correo para comunicarse.
+                </div>
+                <div class="valid-feedback">
+                  Correcto!
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group col-sm-4">
+                <label for="brand">Marca</label>
+                <input type="text" class="form-control" id="brand" placeholder="Ingrese la marca del equipo (opcional)">
+              </div>          
+              <div class="form-group col-sm-4">
+                <label for="model">Modelo</label>
+                <input type="text" class="form-control" id="model" placeholder="Ingrese el modelo del equipo (opcional)">
+              </div>
+              <div class="form-group col-sm-4">
+                <label for="seriesNumber">Modelo</label>
+                <input type="text" class="form-control" id="seriesNumber" placeholder="Ingrese el numero de serie (opcional)">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Descripción</label>
+              <textarea id="comment" class="form-control" rows="5" required></textarea>
+              <div class="invalid-feedback">
+                Por favor coloque una descripción breve del equipo.
+              </div>
+              <div class="valid-feedback">
+                Correcto!
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="problem">Problema que presenta</label>
+              <textarea id="comment" class="form-control" rows="5" required></textarea>
+              <div class="invalid-feedback">
+                Por favor coloque cual es el problema que tiene el equipo.
+              </div>
+              <div class="valid-feedback">
+                Correcto!
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Fecha de ingreso</label>   
+              <input data-provide="datepicker" data-date-format="dd/mm/yyyy" placeholder="dd/mm/yyyy" required>           
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">Quiero que me contacten</label>
+              <hr class="my-2">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Enviar</button> <!--class="btn btn-outline-primary">Enviar-->
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <!-- <div class="container"> 
+      <div class="container-fluid">
+
         <div class="row">
           <div class="col-sm-4">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#funciona" aria-expanded="false" aria-controls="multiCollapse1">¿Como funciona?</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#funciona" 
+            aria-expanded="false" aria-controls="multiCollapse1">¿Como funciona?</button>
           </div>
           <div class="col-sm-4">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reserva" aria-expanded="false" aria-controls="multiCollapse2">¿Donde reservar?</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reserva" 
+            aria-expanded="false" aria-controls="multiCollapse2">¿Donde reservar?</button>
           </div>
           <div class="col-sm-4">
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#pago" aria-expanded="false" aria-controls="multiCollapse3">¿Como funciona?</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#pago" 
+            aria-expanded="false" aria-controls="multiCollapse3">¿Como funciona?</button>
           </div>
         </div>
+
         <div class="row">
           <div class="col sm-4 collapse multi-collapse" id="funciona">
             <h3>Como funciona</h3>
@@ -92,6 +171,7 @@
               Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
           </div>
         </div>
+
         <div class="d-flex flex-wrap flex-row">
           <div class="elements">
             <h3>Elemento 1</h3>
@@ -122,10 +202,11 @@
             </svg>Pedir</button>
           </div>  
         </div>
+
       </div>
-        <!-- En un móvil las columnas ocupan la mitad del dispositivo y en un
-       ordenador ocupan la tercera parte de la anchura disponible -->
-    </div> 
+        <!-En un móvil las columnas ocupan la mitad del dispositivo y en unordenador ocupan la tercera parte de la anchura disponible->
+    </div>-->
+
     <footer>
       <div class="row text-center" style="margin-top: 20px;">
         <div class="col-sm-4 d-flex flex-column">
@@ -158,4 +239,32 @@
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
+  <!-- Calendario-->
+  <!--  jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <!-- Bootstrap Date-Picker Plugin -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+  <script>
+    // https://getbootstrap.com/docs/4.0/components/forms/?
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
 </html>

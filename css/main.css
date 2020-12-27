@@ -1,3 +1,4 @@
+
 .jumbotron{                          /*Modifico el elemento jumbotron para cambiar su color original*/
     background-image:url(/images/desktop-wallpaper.jpg);       /*Color de fondo*/
     color: white;                  /*Color de la letra*/ 
