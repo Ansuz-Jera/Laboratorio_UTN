@@ -14,7 +14,7 @@
 
     <title>Laboratorio de electrónica</title>
   </head>
-  <body class="p-3 my-3  bg-dark text-white">
+  <body class="p-3 my-3 bg-dark text-white">
     <nav class="navbar navbar-expand-md navbar-dark bg-color fixed-top">  <!--navbar "despliegue responsive" "color del texto" "color del fondo" "deja la barra fija"-->
       <a class="navbar-brand" href="#">Laboratorio UTN</a>    <!--Defino "Laboratorio" como ruta a ningun lado-->
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
@@ -56,7 +56,8 @@
         <div class="card card-componentes d-flex flex-column justify-content-between ml-2">
           <!-- <div class="card-header" style="backgraound-color: blue; color: white;">Arduino</div>-->
           <img class="card-img-top" src="images/arduino.jpg" alt="descripcion imagen">
-          <h2 class="card-title">Arduino</h2>
+          <!--tooltip = data-toggle="tooltip" data-placement="top" title="..."-->
+          <h2 class="card-title" data-toggle="tooltip" data-placement="top" title="Todos los shield de arduino disponibles">Arduino</h2> 
           <ul class="card-subtitle">
             <li>Placas de desarrollo</li>
             <li>Shields</li>  
@@ -67,7 +68,7 @@
         </div>
         <div class="card card-componentes d-flex flex-column justify-content-between ml-2">
           <img class="card-img-top" src="images/componentes.jpg" alt="descripcion imagen">
-          <h2 class="card-title">Componentes</h2>
+          <h2 class="card-title" data-toggle="tooltip" data-placement="top" title="Componentes pasivos para simular circuitos">Componentes</h2>
           <ul class="card-subtitle pt-2">
             <li>Resistencias</li>
             <li>Transistores</li>
@@ -78,7 +79,7 @@
         </div>
         <div class="card card-componentes d-flex flex-column justify-content-between ml-2">
           <img class="card-img-top" src="images/herramientas.jpg" alt="descripcion imagen">
-          <h2 class="card-title">Herramientas</h2>
+          <h2 class="card-title" data-toggle="tooltip" data-placement="top" title="Herramientas básicas">Herramientas</h2>
           <ul class="card-subtitle">
             <li>Alicates</li>
             <li>Pinzas</li>
@@ -90,7 +91,7 @@
         </div>
         <div class="card card-componentes d-flex flex-column justify-content-between ml-2">
           <img class="card-img-top" src="images/medicion.jpg" alt="descripcion imagen">
-          <h2>Instrumentos de medición</h2>
+          <h2 class="card-title" data-toggle="tooltip" data-placement="top" title="Herramientas básicas">Instrumentos de medición</h2>
           <ul class="card-subtitle pt-2">
             <li>Testers</li>
             <li>Osciloscopios</li>
@@ -114,7 +115,7 @@
                 Fusce ullamcorper ipsum quis vestibulum vehicula. 
                 Integer porttitor rutrum tellus id convallis. 
                 Cras vehicula mattis est eget dapibus.</p>
-                <button class="btn btn-primary"data-toggle="modal" data-target="#contacto"><span class="icon oi oi-aperture"></span>Pedir</button>
+                <button class="btn btn-primary" data-toggle="popover" title="Arduino " data-content="Consulta disponibilidad"><span class="icon oi oi-aperture"></span>Popover test</button>
           </div>
           <div class="elements">
             <h3>Elemento 2</h3>
@@ -211,7 +212,13 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>    
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function(){
+        $("[data-toggle='tooltip']").tooltip(); //$("[data-toggle='tooltip']") -> elementos
+        $("[data-toggle='popover']").popover();
+      });
+    </script>
   </body>
 </html>
