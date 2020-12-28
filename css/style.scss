@@ -1,5 +1,6 @@
 //https://www.google.com/search?q=html+color+picker&rlz=1C1MSIM_esAR883AR883&oq=html+color&aqs=chrome.1.69i57j0l7.2188j0j7&sourceid=chrome&ie=UTF-8
-$white: #ffffaa;
+$white: #ffffff;
+$violet:#ffffff;
 
 @mixin margenes($top, $bottom) {
     margin-top: $top;
@@ -20,7 +21,7 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
 .footer{
     text-align: center;
     padding: 10px 10px 0 10px;
-    background-color:rgba(132, 0, 255, 0.596);
+    background-color:$violet;
     @include margenes(0px, 10px);
 }
 
@@ -31,7 +32,7 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
 }
 
 .bg-color{
-    background-color: rgba(132, 0, 255, 0.637);     /*cambio el color definido del navbar*/ 
+    background-color: $violet;     /*cambio el color definido del navbar*/ 
 }
 
 .table{
@@ -54,7 +55,7 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
 
 .banner{
     height: 100px;
-    border: 3px solid rgba(132, 0, 255, 0.637);
+    border: 3px solid $violet;
     margin: auto;
 
 

@@ -1,4 +1,3 @@
-
 .jumbotron {
   /*Modifico el elemento jumbotron para cambiar su color original*/
   background-image: url(/images/desktop-wallpaper.jpg);
@@ -16,7 +15,7 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
 .footer {
   text-align: center;
   padding: 10px 10px 0 10px;
-  background-color: rgba(132, 0, 255, 0.596);
+  background-color: #019985;
   margin-top: 0px;
   margin-bottom: 10px; }
 
@@ -26,7 +25,7 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
   padding: 2px 5% 2px; }
 
 .bg-color {
-  background-color: rgba(132, 0, 255, 0.637);
+  background-color: #019985;
   /*cambio el color definido del navbar*/ }
 
 .table {
@@ -46,7 +45,7 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
 
 .banner {
   height: 100px;
-  border: 3px solid rgba(132, 0, 255, 0.637);
+  border: 3px solid #019985;
   margin: auto;
   background-size: 100% 100%;
   animation: banner 10s infinite; }
