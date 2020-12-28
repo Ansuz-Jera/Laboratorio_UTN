@@ -1,0 +1,66 @@
+@white: #ffffff;
+@violet:#6200ff;
+.margenes(@top: 0px, @bottom: 0px) {
+  margin-top: @top;
+  margin-bottom: @bottom;
+}
+
+.jumbotron {
+  /*Modifico el elemento jumbotron para cambiar su color original*/
+  background-image: url(/images/desktop-wallpaper.jpg);
+  /*Color de fondo*/
+  color: @white;
+  /*Color de la letra*/
+  /*margin-top: 10px;                muevo el margen del titulo*/
+  padding: 50px 20px;
+  /*50px arriba y abajo 50px de padding; 20px izquierda y derecha 20px*/ }
+
+/*Uno: un valor unico se aplica a los 4 lados.
+Dos: el primer valor se aplica a arriba y abajo, el segundo valor se aplica a derecha e izquierda.
+Tres: el primer valor se aplica a arriba, el segundo valor a derecha e izquierda y el tercer valor se aplica a abajo del elemento.
+Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la derecha, el tercer valor se aplica a abajo y el cuarto valor se aplica a la izquierda. */
+.footer {
+  text-align: center;
+  padding: 10px 10px 0 10px;
+  background-color: @violet;
+  .margenes(0px, 10px);
+ }
+
+.elements {
+  flex: 1 150px;
+  /*flex: 1-> cuanto queremos que crezca el elemento; 150px ->especifica cual es el ancho definido */
+  padding: 2px 5% 2px; }
+
+.bg-color {
+  background-color: @violet;
+  /*cambio el color definido del navbar*/ }
+
+.table {
+  background-color: rgba(0, 238, 255, 0.596); }
+
+.card {
+  background-color: rgba(0, 238, 255, 0.596); }
+
+.card-componentes {
+  flex: 1 150px;
+  padding: 2px 5px 2px 5px;
+  .margenes(10px, 30px);
+ }
+
+.icon {
+  padding: 2px; }
+
+.banner {
+  height: 100px;
+  border: 3px solid @violet;
+  margin: auto;
+  background-size: 100% 100%;
+  animation: banner 10s infinite; }
+
+@keyframes banner {
+  0%, 30% {
+    background-image: url(/images/banner.jpg); }
+  35%, 65% {
+    background-image: url(/images/banner2.jpg); }
+  70%, 100% {
+    background-image: url(/images/banner3.jpg); } }
