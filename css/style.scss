@@ -1,7 +1,14 @@
+//https://www.google.com/search?q=html+color+picker&rlz=1C1MSIM_esAR883AR883&oq=html+color&aqs=chrome.1.69i57j0l7.2188j0j7&sourceid=chrome&ie=UTF-8
+$white: #ffffff;
+
+@mixin margenes($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
 
 .jumbotron{                          /*Modifico el elemento jumbotron para cambiar su color original*/
     background-image:url(/images/desktop-wallpaper.jpg);       /*Color de fondo*/
-    color: white;                  /*Color de la letra*/ 
+    color: $white;                  /*Color de la letra*/ 
     /*margin-top: 10px;                muevo el margen del titulo*/
     padding: 50px 20px;              /*50px arriba y abajo 50px de padding; 20px izquierda y derecha 20px*/
 }
@@ -14,7 +21,7 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
     text-align: center;
     padding: 10px 10px 0 10px;
     background-color:rgba(132, 0, 255, 0.596);
-    margin-bottom: 10px;
+    @include margenes(0px, 10px);
 }
 
 
@@ -38,8 +45,7 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
 .card-componentes{
     flex: 1 150px;
     padding: 2px 5px 2px 5px;
-    margin-top: 10px;
-    margin-bottom: 30px;;
+    @include margenes(10px, 30px);
 }
 
 .icon{
@@ -66,4 +72,3 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
         background-image:url(/images/banner3.jpg);
     }
 }
-
