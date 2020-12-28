@@ -141,7 +141,7 @@
                 Fusce ullamcorper ipsum quis vestibulum vehicula. 
                 Integer porttitor rutrum tellus id convallis. 
                 Cras vehicula mattis est eget dapibus.</p>
-                <button class="btn btn-primary" data-toggle="popover" title="Arduino " data-content="Consulta disponibilidad"><span class="icon oi oi-aperture"></span>Popover test</button>
+                <button class="btn btn-primary" data-toggle="popover" title="Arduino" data-content="Consulta disponibilidad"><span class="icon oi oi-aperture"></span>Popover test</button>
           </div>
           <div class="elements">
             <h3>Elemento 2</h3>
@@ -177,7 +177,7 @@
                  Cras eu laoreet nunc, pellentesque congue lacus. 
                  Ut ac lectus euismod, ultrices erat sed, ultrices diam.
             </p>
-            <button class="btn btn-primary"data-toggle="modal" data-target="#contacto"><span class="icon oi oi-aperture"></span>Pedir</button>
+            <button class="btn btn-primary"data-toggle="modal" data-target="#contacto" id="contactoBtn"><span class="icon oi oi-aperture"></span>Pedir</button>
         </div>  
       </div>
     </div> 
@@ -246,6 +246,23 @@
         $("[data-toggle='popover']").popover();
         $('.carousel').carousel({
           interval: 2000
+        });
+        //https://getbootstrap.com/docs/4.0/components/modal/
+        $("#contacto").on('show.bs.modal', function(e){    //El ON siempre se usa dentro de jQuery para suscribir eventos
+          console.log('el modal se está mostrando');  
+          $("#contactoBtn").removeClass('btn-primary');
+          $("#contactoBtn").addClass('btn-outline-success');
+          $("#contactoBtn").prop('disabled', true);  
+        });
+        $("#contacto").on('shown.bs.modal', function(e){
+          console.log('el modal se está mostrando despues');    
+        });
+        $("#contacto").on('hide.bs.modal', function(e){
+          console.log('el modal se está ocultando');    
+        });
+        $("#contacto").on('hidden.bs.modal', function(e){
+          console.log('el modal se está ocultando despues'); 
+          $("#contactoBtn").prop('disabled', false);     
         });
       });
     </script>
