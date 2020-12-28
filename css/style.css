@@ -15,7 +15,7 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
 .footer {
   text-align: center;
   padding: 10px 10px 0 10px;
-  background-color: #019985;
+  background-color: #007061;
   margin-top: 0px;
   margin-bottom: 10px; }
 
@@ -25,7 +25,7 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
   padding: 2px 5% 2px; }
 
 .bg-color {
-  background-color: #019985;
+  background-color: #007061;
   /*cambio el color definido del navbar*/ }
 
 .table {
@@ -45,7 +45,7 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
 
 .banner {
   height: 100px;
-  border: 3px solid #019985;
+  border: 3px solid #007061;
   margin: auto;
   background-size: 100% 100%;
   animation: banner 10s infinite; }

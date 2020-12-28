@@ -8,7 +8,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"npm run watch:scss\" \"npm run dev\"",
     "scss": "node-sass -o css/ css/",
-    "watch:scss": "onchange 'css/*.scss' -- npm run scss"
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss ",
+    "clean": "rimraf dist",
+    "imagemin": "imagemin images/* --out-dir dist/images",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin contacts.html -d dist --htmlmin -o dist/contacts.html && usemin orders.html -d dist --htmlmin -o dist/orders.html && usemin repair.html -d dist --htmlmin -o dist/repair.html",
+    "build": "npm run clean && npm run scss && npm run imagemin && npm run usemin"
   },
   "repository": {
     "type": "git",
@@ -29,9 +33,14 @@
     "sass": "^1.30.0"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "cssmin": "^0.4.3",
+    "htmlmin": "0.0.7",
     "lite-server": "^2.6.1",
     "node-sass": "^5.0.0",
     "onchange": "^7.1.0",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.6.0"
   }
 }
