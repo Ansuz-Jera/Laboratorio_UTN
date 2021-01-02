@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <!-- build:css dist/index.css-->
+    <!-- build:css css/index.css-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css"> <!--Icons-->
@@ -239,36 +239,11 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- build:js dist/index.js-->
+    <!-- build:js js/index.js-->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>    
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-      $(function(){
-        $("[data-toggle='tooltip']").tooltip(); //$("[data-toggle='tooltip']") -> elementos
-        $("[data-toggle='popover']").popover();
-        $('.carousel').carousel({
-          interval: 2000
-        });
-        //https://getbootstrap.com/docs/4.0/components/modal/
-        $("#contacto").on('show.bs.modal', function(e){    //El ON siempre se usa dentro de jQuery para suscribir eventos
-          console.log('el modal se está mostrando');  
-          $("#contactoBtn").removeClass('btn-primary');
-          $("#contactoBtn").addClass('btn-outline-success');
-          $("#contactoBtn").prop('disabled', true);  
-        });
-        $("#contacto").on('shown.bs.modal', function(e){
-          console.log('el modal se está mostrando despues');    
-        });
-        $("#contacto").on('hide.bs.modal', function(e){
-          console.log('el modal se está ocultando');    
-        });
-        $("#contacto").on('hidden.bs.modal', function(e){
-          console.log('el modal se está ocultando despues'); 
-          $("#contactoBtn").prop('disabled', false);     
-        });
-      });
-    </script>
+    <script src="js/index.js"></script>
     <!-- endbuild-->
   </body>
 </html>
