@@ -6,8 +6,7 @@
   /*Color de la letra*/
   /*margin-top: 10px;                muevo el margen del titulo*/
   padding: 50px 20px;
-  /*50px arriba y abajo 50px de padding; 20px izquierda y derecha 20px*/
-}
+  /*50px arriba y abajo 50px de padding; 20px izquierda y derecha 20px*/ }
 
 /*Uno: un valor unico se aplica a los 4 lados.
 Dos: el primer valor se aplica a arriba y abajo, el segundo valor se aplica a derecha e izquierda.
@@ -18,57 +17,43 @@ Cuatro: el primer valor se aplica a arriba, el segundo valor se aplica a la dere
   padding: 10px 10px 0 10px;
   background-color: #007061b2;
   margin-top: 0px;
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
 
 .elements {
   flex: 1 150px;
   /*flex: 1-> cuanto queremos que crezca el elemento; 150px ->especifica cual es el ancho definido */
-  padding: 2px 5% 2px;
-}
+  padding: 2px 5% 2px; }
 
 .bg-color {
   background-color: #007061b2;
-  /*cambio el color definido del navbar*/
-}
+  /*cambio el color definido del navbar*/ }
 
 .table {
-  background-color: rgba(0, 238, 255, 0.596);
-}
+  background-color: rgba(0, 238, 255, 0.596); }
 
 .card {
-  background-color: rgba(0, 238, 255, 0.596);
-}
+  background-color: rgba(0, 238, 255, 0.596); }
 
 .card-componentes {
   flex: 1 150px;
   padding: 2px 5px 2px 5px;
   margin-top: 10px;
-  margin-bottom: 30px;
-}
+  margin-bottom: 30px; }
 
 .icon {
-  padding: 2px;
-}
+  padding: 2px; }
 
 .banner {
   height: 100px;
   border: 3px solid #007061b2;
   margin: auto;
   background-size: 100% 100%;
-  animation: banner 10s infinite;
-}
+  animation: banner 10s infinite; }
 
 @keyframes banner {
   0%, 30% {
-    background-image: url(/images/banner.jpg);
-  }
+    background-image: url(/images/banner.jpg); }
   35%, 65% {
-    background-image: url(/images/banner2.jpg);
-  }
+    background-image: url(/images/banner2.jpg); }
   70%, 100% {
-    background-image: url(/images/banner3.jpg);
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
+    background-image: url(/images/banner3.jpg); } }
